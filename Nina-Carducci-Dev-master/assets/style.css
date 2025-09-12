@@ -107,9 +107,10 @@ img {
 
 .nav-pills .nav-link.active, 
 .nav-pills .show > .nav-link {
-	color: #fff;
-	background-color: #BEB45A;
-	border-radius: 0;
+  color: #fff;
+  background-color: #6B6B2A; /* version plus foncée du jaune/vert */
+  border-radius: 0;
+  font-weight: bold;
 }
 
 .nav-pills .nav-link {
