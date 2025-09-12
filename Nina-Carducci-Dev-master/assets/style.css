@@ -57,6 +57,12 @@ body {
 	width: 100%;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .picture.left::before {
 	content: '';
 	background-color: #E5975F;
