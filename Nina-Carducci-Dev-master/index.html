@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
 <link rel="preload" href="./assets/bootstrap/bootstrap.min.css" as="style">
-<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" media="print" onload="this.media='all'">
+
 
 <link rel="preload" href="./assets/style.css" as="style">
 <link rel="stylesheet" href="./assets/style.css" media="print" onload="this.media='all'">
@@ -15,7 +15,10 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Spectral:ital,wght@1,400;1,800&display=swap" as="style">
+
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Spectral:ital,wght@1,400;1,800&display=swap" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Spectral:ital,wght@1,400;1,800&display=swap">
 
 
 	<meta name="description" content="Nina Carducci, photographe professionnelle à Bordeaux : portraits, mariages, concerts, entreprises.">
@@ -29,7 +32,7 @@
 <script src="./assets/maugallery.min.js" defer></script>
 <script src="./assets/scripts.min.js" defer></script>
 
-<!--<link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp">-->
+
 
 <script type="application/ld+json">
 {
@@ -73,14 +76,14 @@
 
 
 
-<!-- Facebook -->
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nina Carducci - Photographe à Bordeaux">
 <meta property="og:description" content="Portraits, mariages, concerts et services photo professionnels à Bordeaux.">
 <meta property="og:image" content="http://127.0.0.1:5500/assets/images/nina.webp">
 <meta property="og:url" content="http://127.0.0.1:5500/">
 
-<!-- Twitter -->
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nina Carducci - Photographe à Bordeaux">
 <meta name="twitter:description" content="Portraits, mariages, concerts et services photo professionnels à Bordeaux.">
@@ -125,7 +128,6 @@
   sizes="100vw"
   class="d-block w-100"
   alt="Un homme traverse une grande route en costume sombre"
- 
   width="1600"
   height="740"
   >
@@ -143,9 +145,9 @@
   sizes="100vw"
   alt="Foule pendant un concert" 
   class="d-block w-100" 
-
-  width="6000"
-  height="2775">
+  width="1600"
+  height="740"
+ >
 
 			</div>
 			<div class="carousel-item">
@@ -159,8 +161,8 @@
     ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp 5653w"
   sizes="100vw"
   class="d-block w-100"
+  loading="lazy"
   alt="Un couple qui s’embrasse lors d’un mariage"
- 
   width="1637"
   height="757"
   >
@@ -201,8 +203,7 @@
 	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
 		<div class="gallery">
-       <!-- Concert -->
-<!-- Concert -->
+
 <picture>
   
   <source srcset="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" type="image/webp">
@@ -216,7 +217,7 @@
     height="1003">
 </picture>
 
-<!-- Entreprises -->
+
 <picture>
   
   <source srcset="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" type="image/webp">
@@ -242,7 +243,7 @@
     height="751">
 </picture>
 
-<!-- Mariages -->
+
 <picture>
   
   <source srcset="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" type="image/webp">
@@ -269,7 +270,7 @@
    />
 </picture>
 
-<!-- Portraits -->
+
 <picture>
   
   <source srcset="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" type="image/webp">
@@ -295,7 +296,7 @@
     />
 </picture>
 
-<!-- Concert -->
+
 <picture>
   
   <source srcset="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" type="image/webp">
@@ -308,7 +309,7 @@
     height="1130">
 </picture>
 
-<!-- Entreprises -->
+
 <picture>
 
   <source srcset="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" type="image/webp">

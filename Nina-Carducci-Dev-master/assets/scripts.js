@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   $(".gallery").mauGallery({
-    columns: { xs: 1, sm: 2, md: 3 }, // 3 colonnes en desktop
+    columns: { xs: 1, sm: 2, md: 3 }, 
     lightBox: true,
     lightboxId: "myAwesomeLightbox",
     showTags: true,

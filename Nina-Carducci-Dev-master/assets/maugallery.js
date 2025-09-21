@@ -2,7 +2,7 @@
   $.fn.mauGallery = function (options) {
     const settings = $.extend(
       {
-        columns: { xs: 1, sm: 2, md: 3 }, // responsive par défaut
+        columns: { xs: 1, sm: 2, md: 3 }, 
         lightBox: true,
         lightboxId: "mauLightbox",
         showTags: true,
@@ -11,7 +11,7 @@
       options
     );
 
-    // === Création des filtres (tags) ===
+   
     function createTags($gallery) {
       const tags = new Set();
       $gallery.find("[data-gallery-tag]").each(function () {
@@ -23,14 +23,14 @@
           class: "gallery-tags",
         });
 
-        // Bouton "Tous"
+       
         $("<button>", {
           class: "gallery-btn active",
           text: "Tous",
           "data-gallery-tag": "all",
         }).appendTo($tagsContainer);
 
-        // Boutons pour chaque tag
+       
         tags.forEach((tag) => {
           $("<button>", {
             class: "gallery-btn",
@@ -39,14 +39,14 @@
           }).appendTo($tagsContainer);
         });
 
-        // Position des filtres
+       
         if (settings.tagsPosition === "top") {
           $gallery.before($tagsContainer);
         } else {
           $gallery.after($tagsContainer);
         }
 
-        // Gestion du filtrage
+        
         $tagsContainer.on("click", "button", function () {
           const tag = $(this).data("gallery-tag");
 
@@ -63,7 +63,7 @@
       }
     }
 
-    // === Création du lightbox ===
+    
     function createLightbox() {
       if ($("#" + settings.lightboxId).length > 0) return;
 
@@ -93,7 +93,7 @@
       });
     }
 
-    // === Responsive via CSS grid ===
+    
     function applyResponsive($gallery) {
       $gallery.css({
         display: "grid",
@@ -114,19 +114,19 @@
       $(window).on("resize", resize);
     }
 
-    // === Initialisation ===
+   
     return this.each(function () {
       const $gallery = $(this);
 
-      // Responsive
+      
       applyResponsive($gallery);
 
-      // Tags
+      
       if (settings.showTags) {
         createTags($gallery);
       }
 
-      // Lightbox
+     
       if (settings.lightBox) {
         createLightbox();
         bindLightbox($gallery);
