@@ -63,6 +63,7 @@
       }
     }
 
+
     function createLightbox() {
   if ($("#" + settings.lightboxId).length > 0) return;
 
@@ -71,15 +72,15 @@
       <div class="modal-dialog modal-fullscreen m-0">
         <div class="modal-content p-0 border-0 bg-transparent shadow-none">
 
-          
+          <!-- Bouton précédent -->
           <button class="lightbox-prev btn btn-dark position-absolute top-0 start-0 m-3 border-0 shadow-none">
             &#10094;
           </button>
 
-          
+          <!-- Image -->
           <img src="" alt="" class="w-100 h-100" style="object-fit: contain;" />
 
-          
+          <!-- Bouton suivant -->
           <button class="lightbox-next btn btn-dark position-absolute top-0 end-0 m-3 border-0 shadow-none">
             &#10095;
           </button>
@@ -91,7 +92,16 @@
 
   
   $("body").append($lightbox);
+
+  
+  $("#" + settings.lightboxId).on("click", function (e) {
+    if ($(e.target).closest(".modal-content").length === 0) {
+      $(this).modal("hide");
+    }
+  });
 }
+
+
 
 
 
