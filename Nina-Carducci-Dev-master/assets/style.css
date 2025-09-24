@@ -139,6 +139,7 @@ img {
 
 
 
+
 .mg-prev,
 .mg-next {
   width: 30px;
@@ -370,6 +371,10 @@ input[type="submit"] {
 
 
 
+
+
+
+
 /* === Gallery Tags === */
 .gallery-tags {
   text-align: center;
@@ -392,3 +397,31 @@ input[type="submit"] {
   font-weight: bold;
 }
 
+
+footer {
+  background-color: #222; /* fond sombre */
+  color: #f5f5f5;        /* texte clair */
+  text-align: center;    /* tout centré */
+  padding: 20px 15px;    /* respiration */
+  font-size: 0.95rem;    /* taille un peu réduite */
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer strong {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffd700;       /* lien doré */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff8c00;       /* orange au survol */
+  text-decoration: underline;
+}
