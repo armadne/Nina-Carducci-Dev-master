@@ -71,15 +71,15 @@
       <div class="modal-dialog modal-fullscreen m-0">
         <div class="modal-content p-0 border-0 bg-transparent shadow-none">
 
-          <!-- Flèche gauche (en haut à gauche) -->
+          
           <button class="lightbox-prev btn btn-dark position-absolute top-0 start-0 m-3 border-0 shadow-none">
             &#10094;
           </button>
 
-          <!-- Image -->
+          
           <img src="" alt="" class="w-100 h-100" style="object-fit: contain;" />
 
-          <!-- Flèche droite (en haut à droite) -->
+          
           <button class="lightbox-next btn btn-dark position-absolute top-0 end-0 m-3 border-0 shadow-none">
             &#10095;
           </button>
