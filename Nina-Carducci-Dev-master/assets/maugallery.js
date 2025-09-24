@@ -62,35 +62,34 @@
         });
       }
     }
-function createLightbox() {
+
+    function createLightbox() {
   if ($("#" + settings.lightboxId).length > 0) return;
 
   const $lightbox = $(`
     <div id="${settings.lightboxId}" class="modal fade" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered modal-fullscreen m-0">
-        <div class="modal-content text-center position-relative border-0 shadow-none"
-             style="background-color: transparent; box-shadow: none;">
-          
-          <!-- bouton précédent -->
-          <button class="lightbox-prev btn btn-dark position-absolute top-50 start-0 translate-middle-y border-0 shadow-none">
+      <div class="modal-dialog modal-fullscreen m-0">
+        <div class="modal-content p-0 border-0 bg-transparent shadow-none">
+
+          <!-- Flèche gauche (en haut à gauche) -->
+          <button class="lightbox-prev btn btn-dark position-absolute top-0 start-0 m-3 border-0 shadow-none">
             &#10094;
           </button>
-          
-          <!-- image -->
-          <div class="modal-body d-flex justify-content-center align-items-center p-3">
-            <img src="" alt="" 
-                 style="max-width: 90%; max-height: 90vh; object-fit: contain; border-radius: 8px;"/>
-          </div>
-          
-          <!-- bouton suivant -->
-          <button class="lightbox-next btn btn-dark position-absolute top-50 end-0 translate-middle-y border-0 shadow-none">
+
+          <!-- Image -->
+          <img src="" alt="" class="w-100 h-100" style="object-fit: contain;" />
+
+          <!-- Flèche droite (en haut à droite) -->
+          <button class="lightbox-next btn btn-dark position-absolute top-0 end-0 m-3 border-0 shadow-none">
             &#10095;
           </button>
+
         </div>
       </div>
     </div>
   `);
 
+  
   $("body").append($lightbox);
 }
 

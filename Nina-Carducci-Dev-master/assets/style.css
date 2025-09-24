@@ -425,3 +425,39 @@ footer a:hover {
   color: #ff8c00;       /* orange au survol */
   text-decoration: underline;
 }
+
+
+#myAwesomeLightbox .modal-dialog,
+#myAwesomeLightbox .modal-content,
+#myAwesomeLightbox .modal-body {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+#myAwesomeLightbox img {
+  width: 100%;
+  height: 100vh;
+  object-fit: contain;
+  background: transparent;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  font-size: 2rem;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(0,0,0,0.7);
+}
