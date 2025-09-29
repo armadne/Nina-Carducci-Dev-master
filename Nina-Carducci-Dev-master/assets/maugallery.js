@@ -106,9 +106,8 @@
 
 
 
-
 function bindLightbox($gallery) {
-  const $items = $gallery.find(".gallery-item");
+  let $items = $gallery.find(".gallery-item:visible"); // seulement visibles
   let currentIndex = 0;
 
   function showImage(index) {
@@ -117,17 +116,21 @@ function bindLightbox($gallery) {
     currentIndex = index;
   }
 
-  $gallery.on("click", ".gallery-item", function () {
+  
+  $gallery.on("click", ".gallery-item:visible", function () {
+    $items = $gallery.find(".gallery-item:visible"); 
     currentIndex = $items.index(this);
     showImage(currentIndex);
     $("#" + settings.lightboxId).modal("show");
   });
 
+  
   $("body").on("click", ".lightbox-prev", function () {
     currentIndex = (currentIndex - 1 + $items.length) % $items.length;
     showImage(currentIndex);
   });
 
+  
   $("body").on("click", ".lightbox-next", function () {
     currentIndex = (currentIndex + 1) % $items.length;
     showImage(currentIndex);
