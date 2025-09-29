@@ -64,33 +64,34 @@
     }
 
 
-    function createLightbox() {
+  function createLightbox() {
   if ($("#" + settings.lightboxId).length > 0) return;
 
   const $lightbox = $(`
     <div id="${settings.lightboxId}" class="modal fade" tabindex="-1">
-      <div class="modal-dialog modal-fullscreen m-0">
-        <div class="modal-content p-0 border-0 bg-transparent shadow-none">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 bg-transparent shadow-none">
+          <div class="modal-body d-flex justify-content-center align-items-center p-0">
 
-          <!-- Bouton précédent -->
-          <button class="lightbox-prev btn btn-dark position-absolute top-0 start-0 m-3 border-0 shadow-none">
-            &#10094;
-          </button>
+            
+            <button class="lightbox-prev btn border-0 position-absolute start-0 top-50 translate-middle-y">
+              &#10094;
+            </button>
 
-          <!-- Image -->
-          <img src="" alt="" class="w-100 h-100" style="object-fit: contain;" />
+           
+            <img src="" alt="" class="lightbox-img" />
 
-          <!-- Bouton suivant -->
-          <button class="lightbox-next btn btn-dark position-absolute top-0 end-0 m-3 border-0 shadow-none">
-            &#10095;
-          </button>
+            
+            <button class="lightbox-next btn border-0 position-absolute end-0 top-50 translate-middle-y">
+              &#10095;
+            </button>
 
+          </div>
         </div>
       </div>
     </div>
   `);
 
-  
   $("body").append($lightbox);
 
   
