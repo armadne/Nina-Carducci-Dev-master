@@ -11,7 +11,7 @@
       options
     );
 
-   
+   // Crée les boutons de filtres (tags) et gère leur affichage
     function createTags($gallery) {
       const tags = new Set();
       $gallery.find("[data-gallery-tag]").each(function () {
@@ -63,7 +63,7 @@
       }
     }
 
-
+   // Crée et insère la fenêtre modale (lightbox) pour afficher les images
   function createLightbox() {
   if ($("#" + settings.lightboxId).length > 0) return;
 
@@ -105,7 +105,7 @@
 
 
 
-
+  // Gère l’ouverture, la navigation et l’affichage des images dans la lightbox
 function bindLightbox($gallery) {
   let $items = $gallery.find(".gallery-item:visible"); // seulement visibles
   let currentIndex = 0;
@@ -138,7 +138,7 @@ function bindLightbox($gallery) {
 }
 
 
-    
+     // Applique une grille responsive avec colonnes dynamiques selon la taille de l’écran
     function applyResponsive($gallery) {
       $gallery.css({
         display: "grid",
